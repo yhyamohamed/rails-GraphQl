@@ -83,8 +83,14 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.11.0)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    graphiql-rails (1.8.0)
+      railties
+      sprockets-rails
+    graphql (2.0.14)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
@@ -184,6 +190,9 @@ DEPENDENCIES
   bootsnap
   debug
   devise (~> 4.8)
+  faker (~> 2.23)
+  graphiql-rails
+  graphql (~> 2.0)
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.4)

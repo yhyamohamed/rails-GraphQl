@@ -51,3 +51,8 @@ end
 
 
 gem "devise", "~> 4.8"
+
+gem "graphql", "~> 2.0"
+gem "graphiql-rails", group: :development
+
+gem "faker", "~> 2.23"
