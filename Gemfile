@@ -56,3 +56,5 @@ gem "graphql", "~> 2.0"
 gem "graphiql-rails", group: :development
 
 gem "faker", "~> 2.23"
+
+gem "pundit", "~> 2.2"

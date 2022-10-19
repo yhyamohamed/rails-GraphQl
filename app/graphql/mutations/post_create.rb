@@ -4,7 +4,7 @@ module Mutations
   class PostCreate < BaseMutation
     description "Creates a new post"
 
-    field :post, Types::PostType
+    field :post, Types::PostType, null: true
     field :errors, [Types::ErrorType], null: false
 
     # argument :post_input, Types::PostInputType, required: true
@@ -24,15 +24,17 @@ module Mutations
           errors: []
         }
       else
-        errs = post.errors.map do |attr, msg|
-          path = ["attr", attr.to_s.camelize(:lower)]
+        errs = post.errors.map do |error|
+
+          path = ["attr", error.attribute.to_s.camelize(:lower)]
           {
             path: path,
-            message: msg,
+            message: error.message,
           }
         end
+
         {
-          post: post,
+          post: nil,
           errors: errs
         }
       end
